@@ -3,14 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>QR Code Scanner</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Upload QR Code Image</h1>
-    <input type="file" id="imageInput" accept="image/*">
+    <div class="header">
+        <h1>QR Code Scanner</h1>
+        <p>This is a QR code scanner</p>
+    </div>
+    <div class="container">
+        <div class="column">
+            <div class="file-upload-container">
+                <div class="file-upload">
+                    <input class="file-input" id="fileInput" type="file" accept="image/*" />
+                    <label class="file-label" for="fileInput">
+                        <i class="upload-icon">📁</i>
+                        <p>Drop your file here or click to upload</p>
+                    </label>
+                </div>
+            </div>
+            <div class="input-footer">
+                <label class="input-file-wrapper" for="fileInput">
+                    <span>Choose File</span>
+                </label>
+                <span id="char-count">No file chosen</span>
+            </div>
+        </div>
+        <div class="column">
+            <h2>Scanned Output</h2>
+            <p id="result"></p>
+        </div>
+    </div>
     <canvas id="canvas" style="display:none;"></canvas>
-    <p id="result">Link will appear here</p>
     <script src="https://unpkg.com/jsqr/dist/jsQR.js"></script>
     <script src="script.js"></script>
 </body>

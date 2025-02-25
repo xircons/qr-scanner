@@ -1,5 +1,151 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
-body{
+body {
+    margin: 0;
+    padding: 0;
     font-family: "Urbanist", serif;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+.header {
+    text-align: center;
+    margin: 7vh 0;
+}
+.header h1 {
+    font-size: 4vw;
+    font-weight: 800;
+    color: #161616;
+    margin-bottom: 0;
+}
+.header p {
+    margin: 0;
+    font-size: 1.2vw;
+    color: #161616;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 90vw;
+    min-height: 60vh;
+    margin: 0 auto;
+    padding: 2vw;
+    gap: 1.5vw;
+    background-color: #f1f1f1;
+    border-radius: 16px;
+    box-sizing: border-box;
+}
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 2vw;
+    min-height: 65vh;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+.input-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: auto;
+}
+#char-count {
+    width: 30%;
+    margin-left: 1vw;
+    font-size: 0.8vw;
+    color: #161616;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+input[type="file"] {
+    display: none;
+}
+.input-file-wrapper {
+    width: 60%;
+    height: 2.8vh;
+    padding: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5vw;
+    font-size: 1vw;
+    font-weight: 600;
+    color: #fff;
+    background: #488aec;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.6s ease;
+}
+.input-file-wrapper:hover {
+    box-shadow: 0 10px 15px -3px #488aec4f, 0 4px 6px -2px #488aec17;
+}
+.column h2 {
+    margin: 0;
+    font-size: 1.8vw;
+    color: #161616;
+}
+#result {
+    flex: 1;
+    margin: 1vw 0;
+    font-size: 1vw;
+    color: #161616;
+    word-wrap: break-word;
+}
+#result a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+#result a:hover {
+    color: #1787ff;
+    text-decoration: underline;
+}
+.file-upload-container {
+    width: 100%;
+    max-width: 600px;
+}
+.file-upload {
+    display: flex;
+    position: relative;
+    border: 1.5px dashed #b8bcbf;
+    border-radius: 10px;
+    padding: 40px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    transition: background-color 0.3s ease-in-out;
+    height: 38vh;
+    cursor: pointer;
+}
+.file-upload:hover {
+    background-color: #eff1f3;
+}
+.file-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+.upload-icon {
+    font-size: 50px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+.file-upload p {
+    margin: 0;
+    font-size: 1.2vw;
+    color: #6c757d;
+}
+.file-upload.dragover {
+    background-color: #007bff;
+}
+.file-upload.dragover .upload-icon,
+.file-upload.dragover p {
+    color: white;
 }
