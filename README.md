@@ -13,3 +13,7 @@ This project is a simple QR Code scanner built using HTML, CSS, and JavaScript. 
 - `index.html`: The main HTML file that defines the structure and layout of the QR Code scanner interface.
 - `style.css`: The stylesheet that styles the scanner's user interface.
 - `script.js`: The JavaScript file that handles image uploads, QR code decoding using jsQR, and dynamic UI updates.
+
+## Demo
+
+![QR Code Scanner Sample](sample.png)
